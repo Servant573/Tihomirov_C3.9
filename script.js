@@ -38,9 +38,9 @@ function setCookie(name, value, options = {}) {
 setCookie('user', 'John', {secure: true, 'max-age': 3600});
 
 acces.onclick = () => {
+    let areaString = area.value.toString();
 
-
-    setCookie('city', area.value, {secure: true, 'max-age': 3600});
+    setCookie('city', areaString, {secure: true, 'max-age': 3600});
     console.log(document.cookie);
     // area.hidden = true
 };
