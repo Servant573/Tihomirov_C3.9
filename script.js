@@ -40,11 +40,13 @@ setCookie('user', 'John', {secure: true, 'max-age': 3600});
 acces.onclick = () => {
 
 
-    setCookie('city', `${area.text}`, {secure: true, 'max-age': 3600});
+    setCookie('city', `${area.value}`, {secure: true, 'max-age': 3600});
     console.log(document.cookie);
     // area.hidden = true
-}
-
+};
+deleteCity.onclick = () => {
+    deleteCookie(city);    
+};
 function deleteCookie(name) {
   setCookie(name, "", {
     'max-age': -1
