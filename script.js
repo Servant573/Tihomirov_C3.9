@@ -64,7 +64,7 @@ function getCookie(name) {
 
 
 function cookieCity(){
-    if getCookie('city') !== undefined:
+    if (getCookie('city')):
         area.hidden = true;
         cityName.innerHTML = "Ваш город - "+ getCookie('city');
     else:
