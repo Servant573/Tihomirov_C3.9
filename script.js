@@ -66,11 +66,14 @@ function getCookie(name) {
 function cookieCity() {
     if (getCookie('city')) {
         area.hidden = true;
+        acces.hidden = true;
         cityName.innerHTML = "Ваш город - "+ getCookie('city');
+
     }
     else {
         cityName.innerHTML = "";
         area.hidden = false;
+        acces.hidden = false;
     }
 }
 
