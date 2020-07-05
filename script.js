@@ -63,14 +63,15 @@ function getCookie(name) {
 
 
 
-function cookieCity(){
-    if (getCookie('city')):
+function cookieCity() {
+    if getCookie('city'){
         area.hidden = true;
         cityName.innerHTML = "Ваш город - "+ getCookie('city');
-    else:
+    }
+    else{
         cityName.innerHTML = "";
         area.hidden = false;
-
+    }
 }
 
 cookieCity();
