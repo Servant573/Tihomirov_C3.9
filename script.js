@@ -46,7 +46,7 @@ acces.onclick = () => {
     // area.hidden = true
 };
 deleteCity.onclick = () => {
-    deleteCookie('city'+'='+areaString);    
+    deleteCookie('city');
 };
 function deleteCookie(name) {
   setCookie(name, "", {
