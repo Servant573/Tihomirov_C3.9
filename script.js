@@ -3,6 +3,7 @@ let area = document.querySelector("#area");
 let deleteCity = document.querySelector("#deleteCity");
 
 let acces = document.querySelector("#acces");
+let cityName = document.querySelector(".your_city")
 
 
 
@@ -60,6 +61,16 @@ function getCookie(name) {
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 
-let cookieCity = getCookie('city');
 
-console.log(cookieCity);
+
+function cookieCity(){
+    if getCookie('city') !== undefined:
+        area.hidden = true;
+        cityName.innerHTML = "Ваш город - "+ getCookie('city');
+    else:
+        cityName.innerHTML = "";
+        area.hidden = false;
+
+}
+
+cookieCity();
