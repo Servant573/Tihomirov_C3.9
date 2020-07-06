@@ -1,13 +1,8 @@
-
 let area = document.querySelector("#area");
 let deleteCity = document.querySelector("#deleteCity");
 
 let acces = document.querySelector("#acces");
 let cityName = document.querySelector(".your_city")
-
-
-
-// deleteCity.hidden = true;
 
 
 function setCookie(name, value, options = {}) {
@@ -35,19 +30,19 @@ function setCookie(name, value, options = {}) {
   document.cookie = updatedCookie;
 }
 
-// Пример использования:
-setCookie('user', 'John', {secure: true, 'max-age': 3600});
-
 acces.onclick = () => {
+    // создаю свою куку
     let areaString = area.value.toString();
 
     setCookie('city', areaString, {secure: true, 'max-age': 3600});
     console.log(document.cookie);
-    // area.hidden = true
 };
+
 deleteCity.onclick = () => {
-    deleteCookie('city');
+    deleteCookie('city');    
 };
+
+
 function deleteCookie(name) {
   setCookie(name, "", {
     'max-age': -1
@@ -62,8 +57,8 @@ function getCookie(name) {
 }
 
 
-
 function cookieCity() {
+    //Функция берет название города из куков (если есть), прячет форму и кнопку. 
     if (getCookie('city')) {
         area.hidden = true;
         acces.hidden = true;
